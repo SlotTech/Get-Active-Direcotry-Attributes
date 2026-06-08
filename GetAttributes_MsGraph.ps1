@@ -14,6 +14,14 @@ Connect-MgGraph -TenantId $tenantID -ClientId $appid -CertificateThumbprint $ctp
 # Use the $PSScriptRoot automatic variable to get the directory of the script.
 $scriptPath = $PSScriptRoot
 
+<#
+Input file format
+upn
+upn1@yourdomain.com
+upn2@yourdomain.com
+upn3@yourdomain.com
+#>
+
 # Prompt the user for the name of the input CSV file.
 # The user only needs to enter the filename, e.g., "users.csv".
 $inputFilename = Read-Host -Prompt "Enter the name of the input CSV file (e.g., users.csv)"
